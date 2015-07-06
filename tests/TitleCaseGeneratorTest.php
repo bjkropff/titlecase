@@ -19,7 +19,7 @@
 
       }
 
-      function test_makeTitleCase_oneWord()
+      function test_makeTitleCase_multipleWord()
       {
         //Arrange
         $test_TitleCaseGenerator = new TitleCaseGenerator;
