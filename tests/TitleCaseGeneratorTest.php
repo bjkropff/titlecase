@@ -29,7 +29,7 @@
         $result = $test_TitleCaseGenerator->makeTitleCase($input);
 
         //Assert
-        $this->assertEquals("the little mermaid", $result);
+        $this->assertEquals("The Little Mermaid", $result);
 
 
       }
