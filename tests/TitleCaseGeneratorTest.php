@@ -35,7 +35,7 @@
 
       }
 
-      // Test to NOT capitalize chosen words in a title
+      // Test to NOT capitalize chosen word ('of') in a title
       function test_makeTitleCase_nonChosenWord()
       {
         //Arrange
@@ -50,6 +50,38 @@
 
 
       }
+      // Test to NOT capitalize chosen words in a title
+      function test_makeTitleCase_multipleNotChosen()
+      {
+        //Arrange
+        $test_TitleCaseGenerator = new TitleCaseGenerator;
+        $input = "father of the bride";
+
+
+        //Act
+        $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+        //Assert
+        $this->assertEquals("Father of the Bride", $result);
+
+
+      }
+      // // Test to NOT capitalize chosen words in a title unless it is the first word
+      // function test_makeTitleCase_nonChosenWord()
+      // {
+      //   //Arrange
+      //   $test_TitleCaseGenerator = new TitleCaseGenerator;
+      //   $input = "the little shop of horrors";
+      //
+      //
+      //   //Act
+      //   $result = $test_TitleCaseGenerator->makeTitleCase($input);
+      //
+      //   //Assert
+      //   $this->assertEquals("Little Shop of Horrors", $result);
+      //
+      //
+      // }
     }
 
 
