@@ -3,7 +3,7 @@
 
     class TitleCaseGeneratorTest extends PHPUnit_Framework_TestCase
     {
-      // Basic test to capitalize a one word title
+      // Basic test to capitalize a one word title.
       function test_makeTitleCase_oneWord()
       {
         //Arrange
@@ -19,7 +19,8 @@
 
       }
 
-      // Test to capitalize a multiple word title
+      // Test to capitalize a multiple word title.
+      //UPDATE: this will also test for first-word exempsions for titlecasing ('the'should be capitalize).
       function test_makeTitleCase_multipleWord()
       {
         //Arrange
@@ -31,11 +32,9 @@
 
         //Assert
         $this->assertEquals("The Little Mermaid", $result);
-
-
       }
 
-      // Test to NOT capitalize chosen word ('of') in a title
+      // Test to NOT capitalize chosen word ('of') in a title.
       function test_makeTitleCase_nonChosenWord()
       {
         //Arrange
@@ -50,7 +49,7 @@
 
 
       }
-      // Test to NOT capitalize chosen words in a title
+      // Test to NOT capitalize chosen words in a title.
       function test_makeTitleCase_multipleNotChosen()
       {
         //Arrange
@@ -66,7 +65,7 @@
 
 
       }
-      // // Test to NOT capitalize chosen words in a title unless it is the first word
+      // // Test to NOT capitalize chosen words in a title unless it is the first word.
       // function test_makeTitleCase_nonChosenWord()
       // {
       //   //Arrange

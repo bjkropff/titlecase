@@ -14,13 +14,14 @@
 
             //Runs a foreach on $input_array_of_words
             foreach ($input_array_of_words as $word) {
-                //if word is in the array $compares, push it to the array
-                if(in_array($word, $compares)){
-                    array_push($output_titlecased, $word);
-                }
-                //if word is NOT in the array $compares, capitalize it and push it to the array
-                if(!in_array($word, $compares)){
+                //if word is NOT in the array $compares OR $output_titlecased is empty, capitalize it and push it to the array
+                if ((!in_array($word, $compares)) || ($output_titlecased == array()))
+                {
                     array_push($output_titlecased, ucfirst($word));
+                //if word is in the array $compares, push it to the array
+                }elseif ((in_array($word, $compares)) && ($output_titlecased != array()))
+                {
+                    array_push($output_titlecased, $word);
                 }
             }
             return implode(" ", $output_titlecased);
