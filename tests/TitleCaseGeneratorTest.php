@@ -46,7 +46,7 @@
         $result = $test_TitleCaseGenerator->makeTitleCase($input);
 
         //Assert
-        $this->assertEquals("little shop of horrors", $result);
+        $this->assertEquals("Little Shop of Horrors", $result);
 
 
       }
