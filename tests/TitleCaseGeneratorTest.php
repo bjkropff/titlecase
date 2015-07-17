@@ -65,22 +65,23 @@
 
 
       }
-      // // Test to NOT capitalize chosen words in a title unless it is the first word.
-      // function test_makeTitleCase_nonChosenWord()
-      // {
-      //   //Arrange
-      //   $test_TitleCaseGenerator = new TitleCaseGenerator;
-      //   $input = "the little shop of horrors";
-      //
-      //
-      //   //Act
-      //   $result = $test_TitleCaseGenerator->makeTitleCase($input);
-      //
-      //   //Assert
-      //   $this->assertEquals("Little Shop of Horrors", $result);
-      //
-      //
-      // }
+
+      // Test to lowercase entire string.
+      function test_makeTitleCase_lowerCase()
+      {
+        //Arrange
+        $test_TitleCaseGenerator = new TitleCaseGenerator;
+        $input = "Father OF The Bride";
+
+
+        //Act
+        $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+        //Assert
+        $this->assertEquals("Father of the Bride", $result);
+
+
+      }
     }
 
 

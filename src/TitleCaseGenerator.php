@@ -10,7 +10,7 @@
             $output_titlecased = array();
 
             //Declares a new array of many non-titlecased words.
-            $compares = array("a", "an", "and", "as", "at", "but", "by", "for", "from", "in", "nor", "of", "on", "or", "the", "to", "up");
+            $compares = array("a", "an", "and", "as", "at", "but", "by", "do", "for", "from", "in", "nor", "of", "on", "or", "the", "to", "up");
 
             //Runs a foreach on $input_array_of_words
             foreach ($input_array_of_words as $word) {
